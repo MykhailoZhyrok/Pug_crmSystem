@@ -1,0 +1,50 @@
+section.customers
+  .customerHeader
+    .customerTitle
+      h2.pageTitle All Customers
+      h3.customersStatus Active Members
+  
+    .search-box
+      input(type="text" placeholder="Search")
+  .separator
+  .body-conteiner
+    table.customers-table
+      thead
+        tr
+          th Customer Name
+          th Company
+          th Phone Number
+          th Email
+          th Country
+          th.status Status
+      tbody
+        each customer in customers
+          tr
+            td #{customer.name}
+            td #{customer.company}
+            td #{customer.phone}
+            td #{customer.email}
+            td #{customer.country}
+            td
+              .status(class=customer.status.toLowerCase())
+                h1 #{customer.status}
+    .pagination
+      span Showing data 1 to 8 of 256K entries
+      nav
+        ul
+          li
+            a(href="#", id="back") ‹
+          li
+            a(href="#", class="active", id="page-data") 1
+          li
+            a(href="#", id="page-data") 2
+          li
+            a(href="#", id="page-data") 3
+          li
+            a(href="#", id="page-data") 4
+          li
+            a(href="#") ...
+          li
+            a(href="#", id="page-data") 40
+          li
+            a(href="#", id="next") ›

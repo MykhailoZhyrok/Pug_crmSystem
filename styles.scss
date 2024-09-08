@@ -1,0 +1,23 @@
+$primary-color: #5a67d8;
+$active-color: #2ed89b;
+$inactive-color: #f56565;
+$background-color: #f9fbff;
+$text-color: #292D32;
+$sidebar-width: 250px;
+
+$active-button-color: #5932ea;
+$passive-color: #b5b7c0;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: $background-color;
+  margin: 0;
+}
+
+.dashboard {
+  display: flex;
+}
+
+@import './stylesComponents/sidebar.scss';
+@import './stylesComponents/content.scss';
+
