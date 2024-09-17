@@ -5,4 +5,4 @@ const customersData = JSON.parse(fs.readFileSync('data/customersData.json', 'utf
 
 const html = pug.renderFile('views/layout.pug', { customers: customersData });
 
-fs.writeFileSync('out/index.html', html); 
+fs.writeFileSync('index.html', html); 
